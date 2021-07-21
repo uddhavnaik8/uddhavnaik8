@@ -26,5 +26,4 @@ jobs:
         uses: jfrog/setup-jfrog-cli@v1.2.0      
       - run: |
           jfrog config add --artifactory-url=${{ secrets.JF_ARTIFACTORY_URL }} --user=${{ secrets.JF_ARTIFACTORY_USER }} --password=${{ secrets.JF_ARTIFACTORY_PWD }}
-          jfrog rt c show
           jfrog rt ping
