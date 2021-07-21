@@ -28,3 +28,4 @@ jobs:
           JF_ARTIFACTORY_1: ${{ secrets.JF_ARTIFACTORY_TOKEN }}        
       - run: |
           jfrog config show
+          jfrog rt ping
