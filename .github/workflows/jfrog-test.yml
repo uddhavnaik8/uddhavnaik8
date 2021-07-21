@@ -23,7 +23,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       - name: Setup JFrog CLI
-        uses: jfrog/setup-jfrog-cli@v1.2.0      
+      - uses: jfrog/setup-jfrog-cli@v1.2.0
+        env:
+          JF_ARTIFACTORY_1: ${{ secrets.JF_ARTIFACTORY_TOKEN }}        
       - run: |
-          jfrog config add --artifactory-url=${{ secrets.JF_ARTIFACTORY_URL }} --user=${{ secrets.JF_ARTIFACTORY_USER }} --password=${{ secrets.JF_ARTIFACTORY_PWD }}
           jfrog rt ping
