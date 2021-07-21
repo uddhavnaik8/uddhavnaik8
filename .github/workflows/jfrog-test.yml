@@ -23,5 +23,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       - name: Setup JFrog CLI
-        uses: jfrog/setup-jfrog-cli@v1.2.0
+        uses: jfrog/setup-jfrog-cli@v1.2.0      
+        with:
+          # JFrog CLI Version
+          version: default
 
